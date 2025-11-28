@@ -22,9 +22,16 @@
 //   console.log("Hello!");
 // }
 
-// undefined vs not defined 
+// undefined vs not defined
 // var a;
 // console.log(a); // undefined
 // console.log(b);  //undefined
 // var b = 10;
 // console.log(x);  // ReferenceError: x is not defined
+
+// scope, scope chain and lexical environment
+// function a() {
+//   console.log(b);  // can access b as b is present in the lexical environment of a() which is global space
+// }
+// var b = 10;
+// a();
