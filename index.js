@@ -35,3 +35,16 @@
 // }
 // var b = 10;
 // a();
+
+// let vs const vs var
+// console.log(a);  // undefined
+// console.log(b);  // ReferenceError: Cannot access 'b' before initialization
+// console.log(c);  // ReferenceError: Cannot access 'c' before initialization
+
+// var a = 10;
+// var a1;
+// a1 = 15;  // possible
+// let b;
+// b = 20;  // possible
+// const c = 30;
+// const d;  // SyntaxError: Missing initializer in const declaration
