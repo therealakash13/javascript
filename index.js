@@ -48,3 +48,39 @@
 // b = 20;  // possible
 // const c = 30;
 // const d;  // SyntaxError: Missing initializer in const declaration
+
+// Closures
+// function x() {
+//   var a = 10;
+//   function y() {
+//     console.log(a);
+//   }
+//   return y;
+// }
+// var z = x();
+// z();  // 10
+
+// setTimeout()
+// function x() {
+//   for (var i = 1; i <= 5; i++) {
+//     function close(x) {
+//       setTimeout(function () {
+//         console.log(x);
+//       }, x * 1000);
+//     }
+//     close(i); // creates a new copy of i each time instead of referring to i
+//   }
+// }
+// x();
+
+//  OR
+
+// function x() {
+// //  not possible with var because of lexical scoping
+//   for (let i = 1; i <= 5; i++) {
+//     setTimeout(function () {
+//       console.log(i);
+//     }, i * 1000);
+//   }
+// }
+// x();
