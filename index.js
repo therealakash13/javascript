@@ -84,3 +84,34 @@
 //   }
 // }
 // x();
+
+// Counter with closure
+// function counter() {
+//   var count = 0;
+//   this.increment = function () {
+//     return ++count;
+//   };
+//   this.decrement = function () {
+//     return --count;
+//   };
+//   this.show = function() {
+//     return count;
+//   }
+// }
+
+// var counter1 = new counter();
+// console.log("Current count:", counter1.show());
+// console.log(" ");
+// console.log("Increment:", counter1.increment());
+// console.log("Increment:", counter1.increment());
+// console.log("Increment:", counter1.increment());
+// console.log("Increment:", counter1.increment());
+// console.log("Increment:", counter1.increment());
+// console.log(" ");
+// console.log("Decrement:", counter1.decrement());
+// console.log("Decrement:", counter1.decrement());
+// console.log("Decrement:", counter1.decrement());
+// console.log("Decrement:", counter1.decrement());
+// console.log("Decrement:", counter1.decrement());
+
+
