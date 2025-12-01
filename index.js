@@ -114,4 +114,25 @@
 // console.log("Decrement:", counter1.decrement());
 // console.log("Decrement:", counter1.decrement());
 
+// Call back functions
+// function process(callback) {
+//   callback();
+// }
+
+// process(() => console.log("Done!"));
+
+// setTimeouts
+// setTimeout(function runLater() {
+//   console.log("This runs later");
+// }, 2000); // runLater() runs after 2000 ms
+
+// console.log("prints immediately"); // doesn't block main thread
+
+// function calculator(a, b, operation) {
+//   return operation(a, b);
+// }
+
+// calculator(5, 3, (x, y) => console.log(x + y)); // add
+// calculator(5, 3, (x, y) => console.log(x * y)); // multiply
+
 
