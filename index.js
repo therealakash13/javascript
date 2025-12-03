@@ -135,4 +135,34 @@
 // calculator(5, 3, (x, y) => console.log(x + y)); // add
 // calculator(5, 3, (x, y) => console.log(x * y)); // multiply
 
+// map. reduce. filter
+const users = [
+  { firstName: "Akash", lastName: "Kumar", age: 27 },
+  { firstName: "Narendra", lastName: "Modi", age: 75 },
+  { firstName: "Elon", lastName: "Musk", age: 55 },
+  { firstName: "Akshay", lastName: "Kumar", age: 55 },
+];
 
+// filter out user with age > 50 and print their fullname
+// const output = users
+//   .filter((user) => user.age > 50)
+//   .map((user) => `${user.firstName} ${user.lastName}`);
+
+// const output = users.reduce((acc, curr) => {
+//   if (curr.age > 50) {
+//     acc.push(`${curr.firstName} ${curr.lastName}`);
+//   }
+//   return acc;
+// }, []);
+
+// reduce it to object of age group -> no. of user
+// const output = users.reduce((acc, curr) => {
+//   if (acc[curr.age]) {
+//     acc[curr.age] = acc[curr.age] + 1;
+//   } else {
+//     acc[curr.age] = 1;
+//   }
+//   return acc
+// }, {});
+
+// console.log(output);
