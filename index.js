@@ -211,3 +211,32 @@ const users = [
 // makeHttpRequest("GET", "https://dummyjson.com/test", function (data) {
 //   console.log(data);
 // });
+
+// callback hell
+// function makeHttpRequest(method, url, callback) {
+//   const xhr = new XMLHttpRequest();
+//   xhr.open(method, url);
+//   xhr.responseType = "json";
+//   // xhr.addEventListener("load", function () {
+//   //   callback(xhr.response);
+//   // });
+
+//   // OR
+
+//   xhr.onreadystatechange = function () {
+//     if (xhr.readyState === 4 && xhr.status === 200) {
+//       callback(xhr.response);
+//     }
+//   };
+//   xhr.send();
+// }
+
+// makeHttpRequest("GET", "https://dummyjson.com/users", function (userData) {
+//   makeHttpRequest("GET", `https://dummyjson.com/posts/user/${userData.users[0].id}`, function (postData) {
+//     makeHttpRequest("GET", `https://dummyjson.com/comments/post/${postData.posts[0].id}`, function (commentData) {
+//       makeHttpRequest( "GET", `https://dummyjson.com/users/${commentData.comments[0].user.id}`, function (commentUserData) {
+//         console.log(commentUserData);
+//       });
+//     });
+//   });
+// });
