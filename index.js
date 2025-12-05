@@ -167,15 +167,47 @@ const users = [
 
 // console.log(output);
 
-
 // xhr
-const xhr = new XMLHttpRequest();
-xhr.open('GET','http://localhost:3000');
-xhr.onprogress = (e) => {
-  if (e.lengthComputable) {
-    console.log(`Downloaded ${e.loaded} of ${e.total} bytes`);
-  } else {
-    console.log(`Downloaded ${e.loaded} bytes`);
-  }
-};
-xhr.send();
+// const xhr = new XMLHttpRequest();
+// xhr.open('GET','http://localhost:3000');
+// xhr.onprogress = (e) => {
+//   if (e.lengthComputable) {
+//     console.log(`Downloaded ${e.loaded} of ${e.total} bytes`);
+//   } else {
+//     console.log(`Downloaded ${e.loaded} bytes`);
+//   }
+// };
+// xhr.send();
+
+// callback hell and xhr
+// xhr request
+// const xhr = new XMLHttpRequest();
+// xhr.open("GET", "https://dummyjson.com/test");
+// xhr.responseType = "json";
+// xhr.addEventListener("load", function () {
+//   console.log(xhr.response);
+// });
+// xhr.send();
+
+// generic function to make calls
+// function makeHttpRequest(method, url, callback) {
+//   const xhr = new XMLHttpRequest();
+//   xhr.open(method, url);
+//   xhr.responseType = "json";
+//   // xhr.addEventListener("load", function () {
+//   //   callback(xhr.response);
+//   // });
+
+//   // OR
+
+//   xhr.onreadystatechange = function () {
+//     if (xhr.readyState === 4 && xhr.status === 200) {
+//       callback(xhr.response);
+//     }
+//   };
+//   xhr.send();
+// }
+
+// makeHttpRequest("GET", "https://dummyjson.com/test", function (data) {
+//   console.log(data);
+// });
