@@ -166,3 +166,16 @@ const users = [
 // }, {});
 
 // console.log(output);
+
+
+// xhr
+const xhr = new XMLHttpRequest();
+xhr.open('GET','http://localhost:3000');
+xhr.onprogress = (e) => {
+  if (e.lengthComputable) {
+    console.log(`Downloaded ${e.loaded} of ${e.total} bytes`);
+  } else {
+    console.log(`Downloaded ${e.loaded} bytes`);
+  }
+};
+xhr.send();
