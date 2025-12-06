@@ -242,34 +242,50 @@ const users = [
 // });
 
 // Promises
-function makeHttpRequest(method, url) {
-  return new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.responseType = "json";
+// function makeHttpRequest(method, url) {
+//   return new Promise((resolve, reject) => {
+//     const xhr = new XMLHttpRequest();
+//     xhr.open(method, url);
+//     xhr.responseType = "json";
 
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) resolve(xhr.response);
-        else reject("Error while fetching: " + url);
-      }
-    };
+//     xhr.onreadystatechange = function () {
+//       if (xhr.readyState === 4) {
+//         if (xhr.status === 200) resolve(xhr.response);
+//         else reject("Error while fetching: " + url);
+//       }
+//     };
 
-    xhr.send();
-  });
-}
+//     xhr.send();
+//   });
+// }
 
-makeHttpRequest("GET", "https://dummyjson.com/users").then((userData) => {
-    return makeHttpRequest(
-      "GET",
-      `https://dummyjson.com/posts/user/${userData.users[0].id}`
-    );
-  }).then((postData) => {
-    return makeHttpRequest("GET", `https://dummyjson.com/comments/post/${postData.posts[0].id}`);
-  }).then((commentData) => {
-    return makeHttpRequest("GET", `https://dummyjson.com/users/${commentData.comments[0].user.id}`);
-  }).then((commentUserData) => {
-    console.log({commentUserData});
-  }).catch((error) => {
-    console.error(error);
-  });
+// makeHttpRequest("GET", "https://dummyjson.com/users")
+// .then((userData) => makeHttpRequest("GET", `https://dummyjson.com/posts/user/${userData.users[0].id}`))
+// .then((postData) => makeHttpRequest("GET", `https://dummyjson.com/comments/post/${postData.posts[0].id}`))
+// .then((commentData) => makeHttpRequest("GET", `https://dummyjson.com/users/${commentData.comments[0].user.id}`))
+// .then((commentUserData) => console.log({commentUserData}))
+// .catch((error) => console.error(error))
+
+// async/await
+// async function loadCommentUser() {
+//   try {
+//     const userData = await makeHttpRequest("GET", "https://dummyjson.com/users");
+//     const userId = userData.users[0].id;
+//     if (!userId) throw new Error("No users found");
+
+//     const postData = await makeHttpRequest("GET", `https://dummyjson.com/posts/user/${userId}`);
+//     const postId = postData.posts[0].id;
+//     if (!postId) throw new Error("No posts found for user " + userId);
+
+//     const commentData = await makeHttpRequest("GET", `https://dummyjson.com/comments/post/${postId}`);
+//     const commentUserId = commentData.comments[0].user.id;
+//     if (!commentUserId) throw new Error("No comment user found for post " + postId);
+
+//     const commentUserData = await makeHttpRequest("GET", `https://dummyjson.com/users/${commentUserId}`);
+//     console.log({ commentUserData });
+//   } catch (err) {
+//     console.error("Fetch flow error:", err);
+//   }
+// }
+
+// loadCommentUser();
