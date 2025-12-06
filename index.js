@@ -240,3 +240,36 @@ const users = [
 //     });
 //   });
 // });
+
+// Promises
+function makeHttpRequest(method, url) {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.responseType = "json";
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) resolve(xhr.response);
+        else reject("Error while fetching: " + url);
+      }
+    };
+
+    xhr.send();
+  });
+}
+
+makeHttpRequest("GET", "https://dummyjson.com/users").then((userData) => {
+    return makeHttpRequest(
+      "GET",
+      `https://dummyjson.com/posts/user/${userData.users[0].id}`
+    );
+  }).then((postData) => {
+    return makeHttpRequest("GET", `https://dummyjson.com/comments/post/${postData.posts[0].id}`);
+  }).then((commentData) => {
+    return makeHttpRequest("GET", `https://dummyjson.com/users/${commentData.comments[0].user.id}`);
+  }).then((commentUserData) => {
+    console.log({commentUserData});
+  }).catch((error) => {
+    console.error(error);
+  });
