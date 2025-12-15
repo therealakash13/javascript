@@ -289,3 +289,84 @@ const users = [
 // }
 
 // loadCommentUser();
+
+// Promises example
+// let walletBal = 5000;
+// const cart = ["Pen", "Pencil", "Book", "Notebook", "Geometry"];
+// const prices = {
+//   Pen: 10,
+//   Pencil: 3,
+//   Book: 300,
+//   Notebook: 70,
+//   Geometry: 150,
+// };
+
+// // createOrder
+// function createOrder(cart) {
+//   return new Promise(function (resolve, reject) {
+//     // Validate Cart
+//     if (!validateCart(cart)) {
+//       return reject(new Error("Insufficient cart items."));
+//     }
+//     resolve(154325);
+//   });
+// }
+
+// // proceedToPayment
+// function proceedToPayment(cartId, walletBal) {
+//   return new Promise(function (resolve, reject) {
+//     const total = cart.reduce((acc, curr) => acc + prices[curr], 0);
+//     if (walletBal < total || cartId <= 0) {
+//       return reject(new Error("Failure : Insufficient wallet balance or invalid cart id."));
+//     }
+//     resolve("Success");
+//   });
+// }
+
+// // showOrderSummary
+// function showOrderSummary(status, cart) {
+//   return new Promise((resolve, reject) => {
+//     if (!status || cart.length === 0) {
+//       return reject(new Error("Invalid order summary"));
+//     }
+//     const total = cart.reduce((acc, item) => acc + prices[item], 0);
+//     resolve({
+//       items: cart,
+//       total,
+//       status,
+//     });
+//   });
+// }
+
+// // updateWallet
+// function updateWallet(walletBal) {
+//   return new Promise(function (resolve, reject) {
+//     const total = cart.reduce((acc, curr) => acc + prices[curr], 0);
+
+//     if (walletBal < total) {
+//       return reject(new Error("Insufficient wallet balance."));
+//     }
+//     resolve(walletBal - total);
+//   });
+// }
+
+// function validateCart(cart) {
+//   if (cart.length < 4) {
+//     return false;
+//   }
+//   return true;
+// }
+
+// createOrder(cart)
+//   .then((cartId) => proceedToPayment(cartId, walletBal))
+//   .then((status) => showOrderSummary(status, cart))
+//   .then((summary) => {
+//     console.log("Order Summary:", summary);
+//     return updateWallet(walletBal);
+//   })
+//   .then((updatedBalance) => {
+//     console.log("Wallet Balance:", updatedBalance);
+//   })
+//   .catch((err) => {
+//     console.error("Error:", err.message);
+//   });
