@@ -395,3 +395,14 @@ const users = [
 // Promise.race([p1, p2, p3])
 //   .then((data) => console.log(data))
 //   .catch((err) => console.error(err));
+
+// fetch("https://dummyjson.com/users")
+// .then((userJSONData) => userJSONData.json())
+// .then(usersData => fetch( `https://dummyjson.com/posts/user/${usersData.users[0].id}`))
+// .then(postJSONData=>postJSONData.json())  
+// .then((postData) => fetch(`https://dummyjson.com/comments/post/${postData.posts[0].id}`))
+// .then(commentJSONData=>commentJSONData.json())
+// .then((commentData) => fetch(`https://dummyjson.com/users/${commentData.comments[0].user.id}`))
+// .then(commentUserJSONData=>commentUserJSONData.json())
+// .then((commentUserData) => console.log({commentUserData}))
+// .catch((error) => console.error(error))
