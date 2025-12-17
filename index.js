@@ -370,3 +370,28 @@ const users = [
 //   .catch((err) => {
 //     console.error("Error:", err.message);
 //   });
+
+// Promise APIs
+// Promise.all() --> Waits for all to finish
+// Promise.allSettled() --> Receive outcomes of all promises (fulfill or rejected)
+// Promise.race() --> Get the result of the first settled promise
+// Promise.any() --> Resolve with the first fulfilled promise
+
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("P1 resolved"), 5000);
+  // setTimeout(() => reject("P1 rejected"), 1000);
+});
+
+const p2 = new Promise((resolve, reject) => {
+  // setTimeout(() => resolve("P2 resolved"), 2000);
+  setTimeout(() => reject("P2 rejected"), 2000);
+});
+
+const p3 = new Promise((resolve, reject) => {
+  // setTimeout(() => resolve("P3 resolved"), 5000);
+  setTimeout(() => reject("P3 rejected"), 3000);
+});
+
+Promise.race([p1, p2, p3])
+  .then((data) => console.log(data))
+  .catch((err) => console.error(err));
