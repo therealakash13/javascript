@@ -406,3 +406,10 @@ const users = [
 // .then(commentUserJSONData=>commentUserJSONData.json())
 // .then((commentUserData) => console.log({commentUserData}))
 // .catch((error) => console.error(error))
+
+// import * as calculator from "./math.js";
+
+// console.log(calculator.add(4,5));
+// console.log(calculator.subtract(10,5));
+// console.log(calculator.multiply(7,9));
+// console.log(calculator.divide(15,3));
