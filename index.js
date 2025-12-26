@@ -399,7 +399,7 @@ const users = [
 // fetch("https://dummyjson.com/users")
 // .then((userJSONData) => userJSONData.json())
 // .then(usersData => fetch( `https://dummyjson.com/posts/user/${usersData.users[0].id}`))
-// .then(postJSONData=>postJSONData.json())  
+// .then(postJSONData=>postJSONData.json())
 // .then((postData) => fetch(`https://dummyjson.com/comments/post/${postData.posts[0].id}`))
 // .then(commentJSONData=>commentJSONData.json())
 // .then((commentData) => fetch(`https://dummyjson.com/users/${commentData.comments[0].user.id}`))
@@ -413,3 +413,21 @@ const users = [
 // console.log(calculator.subtract(10,5));
 // console.log(calculator.multiply(7,9));
 // console.log(calculator.divide(15,3));
+
+// Object Oriented Programming
+
+// const user = {
+//   firstName: "Akash",
+//   lastName: "Kumar",
+//   age: 27,
+//   getYearOfBirth() {
+//     return new Date().getFullYear() - this.age;
+//   },
+//   getFullName() {
+//     return this.firstName + " " + this.lastName;
+//   },
+// };
+// console.log(user.getFullName());
+// console.log(user.getYearOfBirth());
+
+// This example shows Abstraction and Encapsulation of OOPs
