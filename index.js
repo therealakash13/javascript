@@ -431,3 +431,25 @@ const users = [
 // console.log(user.getYearOfBirth());
 
 // This example shows Abstraction and Encapsulation of OOPs
+
+// Constructor function
+// function CreateUser(firstName, lastName, age) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+//   this.age = age;
+// }
+
+// CreateUser.prototype.getFullName = function () {
+//   return this.firstName + " " + this.lastName;
+// }
+
+// CreateUser.prototype.getBirthYear = function () {
+//   return new Date().getFullYear() - this.age;
+// }
+
+// const user1 = new CreateUser("Akash", "Kumar", 27);
+// const user2 = new CreateUser("Kanchan", "Passi", 23);
+
+// console.log(user1.getFullName());
+// console.log(user2.getBirthYear());
+
