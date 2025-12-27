@@ -453,3 +453,32 @@ const users = [
 // console.log(user1.getFullName());
 // console.log(user2.getBirthYear());
 
+
+// Class implementation of above constructor function
+// class CreateUser {
+//   constructor(firstName, lastName, age) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.age = age;
+//   }
+
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   }
+
+//   getBirthYear() {
+//     return new Date().getFullYear() - this.age;
+//   }
+// }
+
+// const user1 = new CreateUser("Akash", "Kumar", 27);
+// const user2 = new CreateUser("Kanchan", "Passi", 23);
+
+// console.log(user1);
+// console.log(user2);
+
+// console.log(user1.getFullName());
+// console.log(user1.getBirthYear());
+
+// console.log(user2.getFullName());
+// console.log(user2.getBirthYear());
