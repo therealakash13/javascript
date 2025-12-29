@@ -483,58 +483,58 @@ const users = [
 // console.log(user2.getBirthYear());
 
 // Getter and Setter
-class CreateUser {
-  #age; // Private field
+// class CreateUser {
+//   #age; // Private field
 
-  constructor(firstName, lastName, age) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age; // guarded by setter
-  }
+//   constructor(firstName, lastName, age) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.age = age; // guarded by setter
+//   }
 
-  // getter
-  get fullName() {
-    return `${this.firstName} ${this.lastName}`;
-  }
+//   // getter
+//   get fullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   }
 
-  // setter
-  set fullName(name) {
-    const [first, last] = name.split(" ");
-    this.firstName = first;
-    this.lastName = last;
-  }
+//   // setter
+//   set fullName(name) {
+//     const [first, last] = name.split(" ");
+//     this.firstName = first;
+//     this.lastName = last;
+//   }
 
-  // getter
-  get birthYear() {
-    return new Date().getFullYear() - this.age;
-  }
+//   // getter
+//   get birthYear() {
+//     return new Date().getFullYear() - this.age;
+//   }
 
-  // setter
-  set age(value) {
-    if (value < 0) {
-      throw new Error("Age cannot be negative");
-    }
-    this.#age = value;
-  }
+//   // setter
+//   set age(value) {
+//     if (value < 0) {
+//       throw new Error("Age cannot be negative");
+//     }
+//     this.#age = value;
+//   }
 
-  // getter
-  get age() {
-    return this.#age;
-  }
-}
+//   // getter
+//   get age() {
+//     return this.#age;
+//   }
+// }
 
-const user = new CreateUser("Akash", "Kumar", 27);
+// const user = new CreateUser("Akash", "Kumar", 27);
 
-console.log("Before setter");
-console.log(user.fullName);
-console.log(user.age);
-console.log(user.birthYear);
+// console.log("Before setter");
+// console.log(user.fullName);
+// console.log(user.age);
+// console.log(user.birthYear);
 
-// setters called
-user.fullName = "Kanchan Passi";
-user.age = 23; 
+// // setters called
+// user.fullName = "Kanchan Passi";
+// user.age = 23; 
 
-console.log("After setter");
-console.log(user.firstName + " " + user.lastName);
-console.log(user.age);
-console.log(user.birthYear);
+// console.log("After setter");
+// console.log(user.firstName + " " + user.lastName);
+// console.log(user.age);
+// console.log(user.birthYear);
