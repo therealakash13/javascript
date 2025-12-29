@@ -532,9 +532,68 @@ const users = [
 
 // // setters called
 // user.fullName = "Kanchan Passi";
-// user.age = 23; 
+// user.age = 23;
 
 // console.log("After setter");
 // console.log(user.firstName + " " + user.lastName);
 // console.log(user.age);
 // console.log(user.birthYear);
+
+// Prototypal Inheritance, extends and super
+// class User {
+//   constructor(firstName, lastName, age) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.age = age;
+//   }
+
+//   // getter
+//   get fullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   }
+
+//   // setter
+//   set fullName(name) {
+//     const [first, last] = name.split(" ");
+//     this.firstName = first;
+//     this.lastName = last;
+//   }
+
+//   // getter
+//   get birthYear() {
+//     return new Date().getFullYear() - this.age;
+//   }
+// }
+
+// class Student extends User {
+//   constructor(firstName, lastName, age, standard) {
+//     super(firstName, lastName, age);
+//     this.standard = standard;
+//   }
+
+//   study() {
+//     console.log(`Studying in ${this.standard}`);
+//   }
+// }
+
+// class Employee extends User {
+//   constructor(firstName, lastName, age, company) {
+//     super(firstName, lastName, age);
+//     this.company = company;
+//   }
+
+//   work() {
+//     console.log(`Working in ${this.company}`);
+//   }
+// }
+
+// const student1 = new Student("Akash", "Kumar", 27, "B.Tech");
+// const employee1 = new Employee("Kanchan", "Passi", 23, "Gogia Chemicals");
+
+// console.log(student1.fullName);
+// console.log(student1.birthYear);
+// student1.study();
+
+// console.log(employee1.fullName);
+// console.log(employee1.birthYear);
+// employee1.work();
