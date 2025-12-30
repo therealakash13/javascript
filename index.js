@@ -597,3 +597,23 @@ const users = [
 // console.log(employee1.fullName);
 // console.log(employee1.birthYear);
 // employee1.work();
+
+// Debouncing
+// const input = document.querySelector("input");
+
+// const debounce = (func, delay) => {
+//   let timer;
+//   return (...args) => {
+//     clearTimeout(timer);
+//     timer = setTimeout(() => func(...args), delay);
+//   };
+// };
+
+// const APICall = (e) => {
+//   if (e.target.value.length < 3) return;
+//   console.log("Calling api with input ", e.target.value);
+// };
+
+// const debouncedAPICall = debounce(APICall, 400);
+
+// input.addEventListener("input", debouncedAPICall);
