@@ -617,3 +617,23 @@ const users = [
 // const debouncedAPICall = debounce(APICall, 400);
 
 // input.addEventListener("input", debouncedAPICall);
+
+// Throttling
+// const mouseMoveCount = document.querySelector('p');
+
+// const throttle = (fn, limit) => {
+//   let inThrottle = false;
+//   return (...args) => {
+//     if (!inThrottle) {
+//       fn(...args);
+//       inThrottle = true;
+//       setTimeout(() => (inThrottle = false), limit);
+//     }
+//   };
+// };
+
+// document.addEventListener(
+//   "mousemove",
+//   throttle(() => mouseMoveCount.innerText++ ,100)
+// );
+
