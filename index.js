@@ -653,3 +653,15 @@ const users = [
 // }
 
 // console.log(multiplyNormal(3, 4, 5));
+
+// Recursive Currying
+// function recursiveCurrying(x) {
+//   return function (y) {
+//     if (y) {
+//       return recursiveCurrying(x * y);
+//     }
+//     return x;
+//   };
+// }
+
+// console.log(recursiveCurrying(3)(2)(4)());
