@@ -637,3 +637,19 @@ const users = [
 //   throttle(() => mouseMoveCount.innerText++ ,100)
 // );
 
+// Currying
+// function multiply(x) {
+//   return function (y) {
+//     return function (z) {
+//       return x * y * z;
+//     };
+//   };
+// }
+
+// console.log(multiply(3)(4)(5));
+
+// function multiplyNormal(x, y, z) {
+//   return x * y * z;
+// }
+
+// console.log(multiplyNormal(3, 4, 5));
