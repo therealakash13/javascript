@@ -665,3 +665,45 @@ const users = [
 // }
 
 // console.log(recursiveCurrying(3)(2)(4)());
+
+// Memoization
+// const cache = Object.create(null);
+// function heavyCalc(x) {
+//   if (x in cache) return cache[x];
+
+//   if (typeof x !== "number" || x < 0) {
+//     throw new Error("x must be a non-negative number");
+//   }
+
+//   const end = Date.now() + 1000;
+//   while (Date.now() < end) {}
+
+//   const result = Number(Math.sqrt(x).toFixed(3));
+//   cache[x] = result;
+//   return result;
+// }
+
+// console.log(heavyCalc(5));
+
+// Memoization using closure
+// function getYourMemoizedHeavyCalc() {
+//   const cache = Object.create(null);
+
+//   function heavyCalc(x) {
+//     if (x in cache) return cache[x];
+
+//     if (typeof x !== "number" || x < 0) {
+//       throw new Error("x must be a non-negative number");
+//     }
+
+//     const end = Date.now() + 1000;
+//     while (Date.now() < end) {}
+
+//     const result = Number(Math.sqrt(x).toFixed(3));
+//     cache[x] = result;
+//     return result;
+//   }
+//   return heavyCalc;
+// }
+
+// const memoizedHeavyCalc = getYourMemoizedHeavyCalc();
